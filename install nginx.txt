@@ -1,0 +1,62 @@
+update apt using this command line
+sudo apt update
+install nginx by using this command line
+sudo apt install nginx
+
+Check status nginx
+systemctl status nginx
+if nginx not work use command line below
+systemctl enable nginx
+
+
+To add firewall rule
+ufw allow "Nginx HTTP"
+
+cd /var/www/html
+git clone https://github.com/LengSeavming/web_personaly.git
+after cloning we got directory var/www/html/web_personaly
+after cloning we need to config
+go to directory /etc/nginx/conf by using command line
+cd /etc/nginx/conf
+we need to create a configuration file by using command line
+nano web.conf
+Copy the content below into the web.conf
+Note: dont forget to config Public IP (Ip Server) to cloudflare
+server {
+    listen 80;  # Listen on port 80 for HTTP requests
+    server_name portfolio.lseavming.website;  # Replace with your domain name or IP address
+
+    root /var/www/html/web_personaly;  # Set the root directory to /var/www/html
+    index index.html;  # Default index files
+
+    # Location block for the root directory
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Optional: error pages
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        internal;
+    }
+}
+
+check the configuration if it work or not by using command line
+nginx -t
+
+command line to restart nginx service
+systemctl restart nginx
+
+
+Step to request HTTPS
+use to command line to install package that can request the certificate
+sudo apt install certbot python3-certbot-nginx
+
+
+Request certificate by using this command line
+sudo certbot --nginx -d domainname

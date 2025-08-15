@@ -1,0 +1,111 @@
+authentication  (login) vs authorization (..)
+
+
+docker compose up -d (build)
+docker container (view command for container)
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+-------------------------------------------------------------------------------------
+Run 'docker container COMMAND --help' for more information on a command.
+PS D:\CamCyber\POS V2> docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+e372f0874f83900b15efbd431750030dc709e8b9e9b7023b31dad18d64f2a783
+910a4f32df84c9568983ec323bc79438b93bbb3018842c781938328f03c43593
+bb937c68550179a02ee3bc2ca5c3e5cb6ee30465b3168cfc2374cd0d8d541123
+8f07e00727f4dcc9ec774d0fb2da6454f1039211a2a748215c63edbd8288fc12
+eaa91e5d754ad261c2f1dc97098d0c79894a016647bcc7ba81ec94170c080e52
+e1bea6b2e6a6227d35a4aee6b0dabc49e90ee71457861864d5fc069f6081d8c0
+
+Total reclaimed space: 15.14MB
+PS D:\CamCyber\POS V2> docker ps
+CONTAINER ID   IMAGE            COMMAND            CREATED       STATUS          PORTS                         
+  NAMES
+fd518714d091   dpage/pgadmin4   "/entrypoint.sh"   6 weeks ago   Up 47 minutes   443/tcp, 0.0.0.0:8202->80/tcp   amt-pgadmin-v1
+-------------------------------------------------------------------------------
+PS D:\CamCyber\POS V2> docker container
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls or ps    List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+
+
+docker ps (view folder containers in docker)
+
+
+
+docker image (view command for image)
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images ,Example: docker image prune id_file
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE

@@ -1,0 +1,106 @@
+how to run code amt system. run with docker(run local)
+if in docker have api, db we need to run web only
+cd api
+npm install
+
+
+npm install (install node_modules)
+npm run start:dev (run api)
+
+Data base
+in .env
+DB_Database = amt
+start to create database table in phpMyAdmin
+npm run migrate (create column in database)
+npm run seeder (run sit data)
+
+npm run migrate ()
+
+
+
+run in file web
+
+npm install (install library)
+
+ng s
+
+
+
+run in amt system file
+
+docker compose up -d --build
+
+
+
+	-----> run POS v2 run code local
+ - run in api
+- have docker-compose.yml in (posv2 file)
+- create .env file in (api file)
+- copy everything in .env.example past to .env
+- check and make .env the same as docker-compose.yml
+- 
+----code in .env file----
+# Application
+PORT = ${PORT:null}
+
+# MySQL & Postgres
+DB_CONNECTION       = postgres
+DB_HOST             = 127.0.0.1
+DB_PORT             = 9001
+DB_DATABASE         = pos
+DB_USERNAME         = postgres
+DB_PASSWORD         = pw@2024
+DB_TIMEZONE         = Asia/Phnom_Penh
+
+#FILE SERVICE V4
+FILE_BASE_URL       = http://container_file:8080
+FILE_USERNAME       = ${FILE_USERNAME}
+FILE_PASSWORD       = ${FILE_PASSWORD}
+
+#JSONWEBTOKEN
+JWT_SECRET          = "6d8d73f7e3c0a76b1ad3cbf0c04a9b7d3c83a8e07f1e8a6d9e2efcb876c94e3fbd7c2a7851b1f98b7b2bfb0b31c27c5b"
+JWT_EXPIRES= "1w"
+#JS Report
+JS_BASE_URL         = https://suvannet.jsreportonline.net
+JS_USERNAME         = chansuvannet999@gmail.com
+JS_PASSWORD         = NET168luckily
+JS_TEMPLATE         = /Invoice/main
+
+#Telegram Bot
+TELEGRAM_BOT_TOKEN  = 7593739467:AAENNf38VttIRP0VMWaq1R2Aq-uMIaF26OQ
+TELEGRAM_CHAT_ID    = 1099740653
+
+# #Email
+# SMTP_HOST           = ${smtp.gmail.com}
+# SMTP_PORT           = ${587}
+# SMTP_USER           = ${your-email@example.com}
+# SMTP_PASS           = ${your-app-password}
+
+# #PHONE
+# TWILIO_ACCOUNT_SID   = ${TWILIO_ACCOUNT_SID}
+# TWILIO_AUTH_TOKEN    = ${TWILIO_AUTH_TOKEN}
+# TWILIO_PHONE_NUMBER  = ${TWILIO_PHONE_NUMBER}
+
+
+->run in api file
+-npm run status
+-npm install
+-npm run start:dev
+
+
+
+
+- run in web
+- have docker-compose.yml in (posv2 file)
+- create .env file in (api file)
+- copy everything in .env.example past to .env
+- check and make .env the same as docker-compose.yml
+
+
+
+
+
+watch     (package.json)  for cmd 
+
+
+file run= api (command lines are the same ex: npm run migrate)

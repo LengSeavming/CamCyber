@@ -1,0 +1,3 @@
+Know python string method
+
+cmd: print(help(str))

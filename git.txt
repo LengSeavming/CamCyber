@@ -1,0 +1,28 @@
+had set up Android studio and flutter
+create new folder 
+cd: flutter create (name project)
+website : pub.dev
+\\
+
+
+
+git config --global user.name "My Name" 
+git config --global user.email "myemail@example.com"
+(when you want to change name when push code into GitLab or github)
+git branch -d name_branch (delete branch)
+push project to GitLab or GitHub
+git init
+git remote add...(remote)
+git add .
+git commit -m "sth"(report)
+git push
+->how to check branch name 
+git check out name_branch (change branch)
+git branch (view branch)
+->how to change code to new branch
+git checkout -b new_name_branch
+git status (view)
+git branch -a (view all branch)
+git cheakout name_branch (get code from branch name) or change branch by name_branch
+git pull (take from others branch)
+git fetch -a (see all branch)

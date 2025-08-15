@@ -1,0 +1,9 @@
+POSTMAN use for test api data
+cuzs api developer has no interface like frontend
+
+
+->metot use to fetch data from api
+post login
+get by url
+put login or update data
+delete delete

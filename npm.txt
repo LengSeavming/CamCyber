@@ -1,0 +1,18 @@
+npm run migrate: to create table in database
+npm run seeder: push data into the table
+npm run start:dev(run api)
+npm i (install)
+
+git pull origin name_branch (pull code latest)
+
+-models folder (connect to database)
+-controller (get data from database by models )
+
+-module (export class from controller and service for make app.module )
+and for organize application and component  making it's easier to manage and understand
+
+-dto is like an obj that defend the how to data will be send over network.
+
+-service (business logic using for data access opporation) get data from database and controller 
+-component (share data from database to service )
+-type ()
